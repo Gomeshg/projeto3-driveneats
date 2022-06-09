@@ -3,14 +3,20 @@
 }
 
 body{
-    background-color: black;
+    /* background-color: black; */
 }
 
 .mobile-page{
-    background-color: aqua;
-
     width: 414px;
     margin: 0 auto;
+}
+
+img{
+    height: 87px;
+    width: 144px;
+    border-radius: 10px;
+
+    object-fit: cover;
 }
 
 
@@ -18,17 +24,37 @@ body{
 
 
 header{
-    background-color: red;
-
+    background-color: #CF2B2B;
+    width: 414px;
     height: 96px;
+    padding: 10px 10px 10px 20px;
+
+    position: fixed;
+    top: 0;
+    left: 100;
+    right: 100;
 }
 
 header > h1{
     font-family: Righteous;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 54.63px;
+    color: white;
+    /* border: 1px solid blue; */
+
+    z-index: 1;
 }
 
 header > p {
 
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    line-height: 21.09px;
+    /* border: 1px solid blue; */
+
+    z-index: 1;
 }
 
 
@@ -36,27 +62,38 @@ header > p {
 
 
 main{
-    background-color: blue;
+    background-color: #E5E5E5;;
+    margin-top: 96px;
+    height: 930px;
+    margin-bottom: 96px;
 
-    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .container{
-    background-color: pink;
+    background-color: #E5E5E5;
 
     height: 300px;
-    padding: 2%;
+    padding: 20px 15px;
+    /* border: 1px solid red; */
 }
 
 .title{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
+    font-family: Righteous;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32.28px;
+    color: #333333;
 
     height: 45px;
 }
 
 .content{
-    background-color: brown;
-
+    /* background-color: brown; */
+    
     height: 265px;
     overflow-x: scroll;
 
@@ -66,16 +103,47 @@ main{
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: 1fr;
 
-    gap: 12px;
+    gap: 15px;
 }
 
 .card{
-    background-color: aqua;
+    background-color: white;
 
     height: 216px;
     width: 172px;
 
     border-radius: 5%;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card > h3{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18.75px;
+    color:#333333;
+}
+
+.card > p {
+    align-self: flex-start;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 17.58px;
+    color: #A6A6A6;
+}
+
+.card .price{
+    align-self: flex-start;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    color: black;
+
 }
 
 
@@ -83,13 +151,42 @@ main{
 
 
 footer{
-    background-color: yellow;
+    background-color: white;
 
+    width: 414px;
     height: 96px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+    left: 100;
+    right: 100;
+
 }
 
 .button-request{
 
+    width: 364px;
+    height: 61px;
+    border-radius: 50px;
+    border: none;
+    background-color: #CBCBCB;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-request > p {
+    width: 200px;
+    color:white;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.44px;
+    text-align:center;
 }
 
 
