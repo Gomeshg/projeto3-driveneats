@@ -6,7 +6,7 @@ body{
     /* background-color: black; */
 }
 
-.mobile-page{
+#mobile-page{
     width: 414px;
     margin: 0 auto;
 }
@@ -31,8 +31,10 @@ header{
 
     position: fixed;
     top: 0;
-    left: 100;
-    right: 100;
+    left: 1;
+    right: 1;
+
+    z-index: 1;
 }
 
 header > h1{
@@ -64,6 +66,7 @@ header > p {
 main{
     background-color: #E5E5E5;;
     margin-top: 96px;
+    width: 414px;
     height: 930px;
     margin-bottom: 96px;
 
@@ -120,7 +123,14 @@ main{
     align-items: center;
     justify-content: space-evenly;
 
-    box-shadow: 0 0 10px -5px black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 10px -4px;
+
+    cursor: pointer;
+    position: relative;
+}
+
+.card_selected{
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
 }
 
 .card > h3{
@@ -145,7 +155,23 @@ main{
     font-weight: 400;
     line-height: 18.75px;
     color: black;
+}
 
+.button-select-card{
+    display: none;
+    
+    height: 16px;
+    width: 16px;
+    background-image: url(./imagens/Vector.png);
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(-10px, -21px);
+}
+
+.button-selected{
+    display: inline;
 }
 
 
@@ -169,7 +195,7 @@ footer{
 
 }
 
-.button-request{
+#button-request{
 
     width: 364px;
     height: 61px;
@@ -182,13 +208,16 @@ footer{
     align-items: center;
 }
 
-.button-request > p {
+#button-request > p {
     width: 200px;
     color:white;
     font-size: 20px;
     font-weight: 400;
     line-height: 23.44px;
     text-align:center;
+
+    cursor: pointer;
+
 }
 
 
