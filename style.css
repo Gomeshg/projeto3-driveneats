@@ -21,9 +21,7 @@ img{
     object-fit: cover;
 }
 
-
 /* ------------------------------------------------------------- */
-
 
 header{
     background-color: #CF2B2B;
@@ -45,25 +43,22 @@ header > h1{
     font-size: 44px;
     line-height: 54.63px;
     color: white;
-    /* border: 1px solid blue; */
 
     z-index: 1;
 }
 
 header > p {
 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: white;
     line-height: 21.09px;
-    /* border: 1px solid blue; */
-
+  
     z-index: 1;
 }
 
-
 /* ------------------------------------------------------------- */
-
 
 main{
     background-color: #E5E5E5;;
@@ -79,14 +74,12 @@ main{
 
 .container{
     background-color: #E5E5E5;
-
+ 
     height: 300px;
     padding: 20px 15px;
-    /* border: 1px solid red; */
 }
 
 .title{
-    /* background-color: blueviolet; */
     font-family: Righteous;
     font-weight: 400;
     font-size: 26px;
@@ -97,17 +90,12 @@ main{
 }
 
 .content{
-    /* background-color: brown; */
-    
-    height: 265px;
+    height: 222px;
     overflow-x: scroll;
-
-    padding: 15px;
-
+    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-
     gap: 15px;
 }
 
@@ -176,9 +164,7 @@ main{
     display: inline;
 }
 
-
 /* ------------------------------------------------------------- */
-
 
 footer{
     background-color: white;
@@ -218,11 +204,12 @@ footer{
     font-weight: 400;
     line-height: 23.44px;
     text-align:center;
-
 }
+
 #button-able{
     background-color: #32B72F;
 }
+
 #button-able > p{
     font-weight: bold;
 }
@@ -236,6 +223,7 @@ footer{
 .adjust-header-layout{
     transform: translateY(-96px);
 }
+
 .adjust-footer-layout{
     transform: translateY(96px);
 }
@@ -261,7 +249,6 @@ footer{
     display: none;    
 }
 
-
 .confirm-request-tittle{
     font-size: 22px;
     font-weight: bold;
@@ -273,6 +260,7 @@ footer{
     justify-content: center;
     margin-bottom: 5px;
 }
+
 .confirm-request-content{
     color: white;
     font-size: 22px;
@@ -305,6 +293,7 @@ footer{
 .confirm-request-send-button a {
     color: #50D074;
 }
+
 .confirm-request-cancel-button{
     color: white;
     font-size: 22px;

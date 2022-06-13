@@ -1,27 +1,27 @@
-const $mobile_page = document.getElementById('mobile-page')
-const $cards = document.getElementsByClassName('card')
+const $mobile_page = document.getElementById('mobile-page');
+const $cards = document.getElementsByClassName('card');
 const $content = document.getElementsByClassName('content');
-const $button_request = document.getElementById('button-request')
-const $header = document.getElementsByTagName('header')[0]
-const $footer = document.getElementsByTagName('footer')[0]
-const $confirm_request = document.getElementsByClassName('confirm-request')[0]
-const $confirm_request_send_button = document.getElementsByClassName('confirm-request-send-button')[0]
-const $confirm_request_cancel_button = document.getElementsByClassName('confirm-request-cancel-button')[0]
-const $confirm_request_content_tittle = document.getElementsByClassName('confirm-request-content-tittle')
-const $confirm_request_content_price = document.getElementsByClassName('confirm-request-content-price')
-const $price_total = document.getElementsByClassName('price_total')[0]
+const $button_request = document.getElementById('button-request');
+const $header = document.getElementsByTagName('header')[0];
+const $footer = document.getElementsByTagName('footer')[0];
+const $confirm_request = document.getElementsByClassName('confirm-request')[0];
+const $confirm_request_send_button = document.getElementsByClassName('confirm-request-send-button')[0];
+const $confirm_request_cancel_button = document.getElementsByClassName('confirm-request-cancel-button')[0];
+const $confirm_request_content_tittle = document.getElementsByClassName('confirm-request-content-tittle');
+const $confirm_request_content_price = document.getElementsByClassName('confirm-request-content-price');
+const $price_total = document.getElementsByClassName('price_total')[0];
 
-const cards = [...$cards]
-const content = [...$content]
+const cards = [...$cards];
+const content = [...$content];
 
-let request = []
-let price = []
-let price_total = 0
+let request = [];
+let price = [];
+let price_total = 0;
 
-cards.map(card => card.addEventListener('click', select_card))
-cards.map(card => card.addEventListener('click', enable_request))
-$button_request.addEventListener('click', confirm_request)
-$confirm_request_cancel_button.addEventListener('click', cancel_request)
+cards.map(card => card.addEventListener('click', select_card));
+cards.map(card => card.addEventListener('click', enable_request));
+$button_request.addEventListener('click', confirm_request);
+$confirm_request_cancel_button.addEventListener('click', cancel_request);
 
 
 function select_card(e) {
@@ -72,6 +72,7 @@ function enable_request() {
     if (cont === 3) {
         price_total = 0
         price = []
+        request = []
 
         cards.map(card => card.classList.contains('card_selected') ? cards_selected.push(card): 0)
         cards_selected.map(card_selected => request.push(card_selected.getElementsByTagName('h3')[0].textContent))
@@ -88,7 +89,6 @@ function enable_request() {
 
 
 function confirm_request(){
-
     $mobile_page.classList.add('filter')
     $header.classList.add('adjust-header-layout')
     $footer.classList.add('adjust-footer-layout')
@@ -102,7 +102,6 @@ function confirm_request(){
     }
 
     $price_total.textContent = `R$ ${price_total.toFixed(2)}`;
-    
     $confirm_request.style.display = 'flex';
 
     const text_request = encodeURIComponent(`Olá, gostaria de fazer o pedido: \n- Prato: ${request[0]}\n- Bebida: ${request[1]}\n- Sobremesa: ${request[2]}\nTotal: R$ ${price_total.toFixed(2)}\n\nNome: ${name}\nEndereço: ${adress}`)
@@ -111,7 +110,6 @@ function confirm_request(){
 }
 
 function cancel_request(){
-
     $confirm_request.style.display = 'none'
     $mobile_page.classList.remove('filter')
     $header.classList.remove('adjust-header-layout')
